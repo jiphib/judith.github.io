@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judiths Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0f7fa;
-        }
-        header {
-            background-color: #0288d1;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        main {
-            padding: 2em;
-        }
-        footer {
-            background-color: #0288d1;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Willkommen auf Judiths Website (index)</h1>
+<html lang="en">
+  <head>
+    <title>Judith Boehme Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="#home-sec">
+          <img
+            src="assets/header.png"
+            alt="Company Logo"
+            id="header-img"
+        /></a>
+        <nav id="nav-bar">
+          <a href="#about" class="nav-link">ÜBER MICH</a>
+          <a href="#contact" class="nav-link">KONTAKT</a>
+        </nav>
+      </div>
     </header>
     <main>
-        <h2>Über Judith</h2>
-        <p>Hier wirst du bald etwas lesen</p>
-        <h2>Kontakt</h2>
-        <p>Hier kannst du Kontaktinformationen hinzufügen.</p>
+      <section id="home-sec" class="flexible home-sec">
+        <div class="eye-grabber-img">
+          <img src="assets/front_picture.png" alt="Front Picture" />
+        </div>
+        <div class="eye-grabber">
+          <h1>Judith Böhme</h1>
+          <h2>
+            Entfalte deine inneren Ressourcen
+          </h2>
+        </div>
+      </section>
+      <section id="about" class="sec-padding">
+        <h3 class="section-heading">ÜBER MICH</h3>
+        <div class="sec-content-div flexible">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio, et dictum interdum nisi laoreet.
+
+          </p>
+          <img src="assets/design.png" alt="judithboehme working" />
+        </div>
+      </section>
+       <section class="sec-padding" id="contact">
+        <h3 class="section-heading">Kontakt</h3>
+        <div class="sec-content-div flexible">
+          <h6>Möchtest du mehr wissen? Kontaktiere mich:</h6>
+          <form
+            id="form"
+            action="https://formsubmit.co/your@email.com"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <input type="submit" class="btn" id="submit" value="Ich möchte mehr wissen" />
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>© 2024 Judiths Website</p>
     </footer>
-</body>
+  </body>
 </html>
