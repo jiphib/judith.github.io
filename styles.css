@@ -234,6 +234,11 @@ nav {
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
 }
+.tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 #impressum {
   background-color: #ee6f57;
 }
