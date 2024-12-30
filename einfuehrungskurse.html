@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Virtues Project Einführungskurs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="index.html">
+          <img
+            src="assets/header.png"
+            alt="Company Logo"
+            id="header-img"
+        /></a>
+        <nav id="nav-bar">
+          <a href="#termine" class="nav-link">TERMINE</a>
+          <a href="#registration" class="nav-link">ANMELDUNG</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      
+      <section id="home-sec" class="flexible home-sec">
+        <div class="eye-grabber">
+          <h1>Virtues Project Einführungskurs</h1>
+        </div>
+        <div class="sec-content-div flexible">
+          <p>
+            Möchtest du dich inspirieren lassen, wie du empathischer mit dir selbst und anderen umgehen kannst? Das Virtues Project™ hilft dir, positive Charaktereigenschaften zu erkennen und zu stärken. Dazu stellt die Initiative FÜNF einfache und alltagstaugliche STRATEGIEN zur Verfügung. Erfahre in diesem Kurs, wie innere Ressourcen dir und deiner Familie Orientierung und Stärke geben.
+          </p>
+          <p>
+            Preis: 240 €<br><br>
+            Einige Arbeitgeber unterstützen diesen Kurs als Weiterbildungsmaßnahme – einfach nachfragen!
+            Nach Abschluss des Kurses (12 Stunden) erhältst du ein Zertifikat.
+            <br>
+            <br>Der Kurs findet statt, wenn eine Mindestteilnehmerzahl erreicht wird. Bitte registriere dich unten auf dieser Seite
+          </p>
+        </div>
+      </section>
+      
+      <section id="termine" class="sec-padding">
+        <h3 class="section-heading">Termine</h3>
+        <div class="sec-content-div flexible">
+          
+          <div class="tile">
+            <h4>Einführungskurs Vormittags – Präsenz (25-01)</h4>
+            <p>
+              <i>jeweils von 09 - 11 Uhr</i><br>
+              <br>
+              Sechs Module jeden Donnerstag<br>
+              <br>
+              13.2.25 | 20.2.25 | 27.2.25 | 13.3.25 | 20.3.25 | 27.3.25<br>
+            </p>
+          </div>
+          
+          <div class="tile">
+            <h4>Einführungskurs Vormittags – Online (25-02)</h4>
+            <p>
+              <i>jeweils von 09 - 11 Uhr</i><br>
+              <br>
+              Sechs Module jeden Dienstag<br>
+              <br>
+              11.2.25 | 18.2.25 | 25.2.25 | 11.3.25 | 18.3.25 | 25.3.25
+            </p>
+          </div>
+
+          <div class="tile">
+            <h4>Einführungskurs Abends – Präsenz (25-03)</h4>
+            <p>
+              <i>jeweils von 19 - 21 Uhr</i><br>
+              <br>
+              Sechs Module jeden Dienstag <br>
+              <br>
+              11.2.25 | 18.2.25 | 25.2.25 | 11.3.25 | 18.3.25 | 25.3.25
+            </p>
+          </div>
+
+          <div class="tile">
+            <h4>Einführungskurs Abends – Online (25-04)</h4>
+            <p>
+              <i>jeweils von 19 - 21 Uhr</i><br>
+              <br>
+              Sechs Module jeden Donnerstag<br>
+              <br>
+              13.2.25 | 20.2.25 | 27.2.25 | 13.3.25 | 20.3.25 | 27.3.25
+            </p>
+          </div>
+        </div>
+    
+      <section class="sec-padding" id="registration">
+        <h3 class="section-heading">Anmeldung</h3>
+        <div class="sec-content-div flexible">
+          <p>
+            Hast du Interesse? Ich kontaktiere dich gern.
+          </p>
+        </div>
+        <div class="sec-content-div flexible">
+          
+            <form
+              id="form"
+              action="https://formsubmit.co/cc6150f4c09e63a20e608f8b54ca0aaa"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="Vor- und Nachname"
+                id="name"
+                placeholder="Vor- und Nachname"
+                required
+              />
+              <br><br>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+              <br><br>
+              <input type="radio" id="25-01" name="kurs" value="25-01">
+              <label for="25-01">Vormittags Präsenz (25-01)</label><br>
+              <input type="radio" id="25-02" name="kurs" value="25-02">
+              <label for="25-02">Vormittags Online (25-02)</label><br>
+              <input type="radio" id="25-03" name="kurs" value="25-03">
+              <label for="25-03">Abends Präsenz (25-03)</label><br>
+              <input type="radio" id="25-04" name="kurs" value="25-04">
+              <label for="25-04">Abends Online (25-04)</label><br>
+              <br>
+              <input
+                type="hidden"
+                id="event"
+                name="event" value="Einführungskurs Abends"
+              />
+              <input type="submit" class="btn" id="submit" value="Ich habe Interesse" />
+            </form>
+            
+        </div>
+      </section>
+
+    </main>
+    <footer>
+    </footer>
+
+  </body>
+</html>
