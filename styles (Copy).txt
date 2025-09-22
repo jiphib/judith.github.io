@@ -52,29 +52,11 @@ body {
 nav {
   position: relative;
   top: 0.8rem;
-  /* float: right; */
-  display: flex;             /* ✅ Make nav a flex container */
-  flex-wrap: wrap;           /* ✅ Allow links to wrap to the next line */
-  gap: 0.5rem;                /* ✅ Add space between links */
+  float: right;
   font-size: 1.6rem;
   font-weight: 500;
   padding: 1.5rem 0;
 }
-
-/* Optional: center the links if desired */
-.header-content-div nav {
-  justify-content: center;   /* ✅ Center links in both lines */
-}
-
-/* Adjust nav-link spacing so wrapped lines look balanced */
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  padding: 0.6rem 1rem;       /* ✅ Slightly more padding for better line spacing */
-  transition: border-bottom 0.2s;
-}
-
-
 @media (max-width: 800px) {
   nav {
     position: static;
@@ -178,11 +160,6 @@ nav {
 .btn:active {
   transform: scale(0.9);
 }
-
-section {
-  scroll-margin-top: 120px; /* Höhe des Headers + etwas Luft */
-}
-
 .section-heading {
   font-size: 2.5rem;
   font-family: "Montserrat", sans-serif;
@@ -193,7 +170,6 @@ section {
   text-align: center;
 }
 .sec-content-div {
-  
   font-size: 2rem;
   text-align: start;
   padding: 0 2rem 5rem 2rem;
@@ -203,7 +179,7 @@ section {
   margin: 0 auto;
 }
 .sec-padding {
-  padding: 3rem 0 3rem 0;
+  padding: 0rem 0 0rem 0;
 }
 #about {
   background-color: #fafafa;
