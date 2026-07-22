@@ -189,9 +189,10 @@ section {
   font-weight: 500;
   line-height: 1.2;
   margin: 0;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
+
 .sec-content-div {
   
   font-size: 2rem;
@@ -365,4 +366,8 @@ footer a {
 span.space {
   display: inline-block;
   width: 200px; /* Abstand in Pixeln */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
 }
