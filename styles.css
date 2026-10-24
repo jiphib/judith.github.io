@@ -1,373 +1,773 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+
 :root {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
+
+  --color-text: #333;
+  --color-muted: #666;
+  --color-accent: #e23d3d;
+  --color-accent-hover: #f84848;
+  --color-light: #fafafa;
+  --color-gray: #e3e3e3;
+
+  --content-width: 95rem;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  color: var(--color-text);
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
 }
+
+
+/* ==========================================================
+   HEADER / NAVIGATION
+   ========================================================== */
+
 #header {
-  height: max-content;
-  font-family: "Montserrat", sans-serif;
   width: 100%;
-  background-color: white;
-  padding: 1rem 0;
   position: sticky;
   z-index: 99;
   top: 0;
-  left: 0;
+
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+
   box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 800px) {
-  #header {
-    text-align: center;
-    height: auto;
-  }
-}
+
+
+/* Logo und Navigation in einer Zeile */
+
 .header-content-div {
-  max-width: 120rem;
-  width: auto;
+  width: 100%;
+  max-width: 140rem;
+
   margin: 0 auto;
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 6rem;
 }
-@media (max-width: 991px) {
-  .header-content-div {
-    max-width: 75rem;
-  }
-}
+
+
+/* Logo */
+
 #header-img {
+  display: block;
+
   height: 5rem;
   width: auto;
+
+  flex-shrink: 0;
 }
-@media (max-width: 800px) {
-  #header-img {
-    height: 4rem;
-  }
-}
+
+
+/* Navigation */
+
 nav {
-  position: relative;
-  top: 0.8rem;
-  /* float: right; */
-  display: flex;             /* ✅ Make nav a flex container */
-  flex-wrap: wrap;           /* ✅ Allow links to wrap to the next line */
-  gap: 0.5rem;                /* ✅ Add space between links */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+
+  margin: 0;
+  padding: 0;
+
   font-size: 1.6rem;
   font-weight: 500;
-  padding: 1.5rem 0;
 }
 
-/* Optional: center the links if desired */
-.header-content-div nav {
-  justify-content: center;   /* ✅ Center links in both lines */
-}
 
-/* Adjust nav-link spacing so wrapped lines look balanced */
+/* Einzelne Navigationspunkte */
+
 .nav-link {
-  text-decoration: none;
   color: #333;
-  padding: 0.6rem 1rem;       /* ✅ Slightly more padding for better line spacing */
-  transition: border-bottom 0.2s;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  padding: 0.6rem 0.4rem;
+
+  transition:
+    color 0.2s,
+    border-bottom 0.2s;
 }
 
 
-@media (max-width: 800px) {
-  nav {
-    position: static;
-    float: none;
-    font-size: 1.4rem;
-    padding: 0.5rem 1rem;
-  }
-}
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  margin: 0 0.5rem;
-  padding: 0 0.6rem;
-  transition: border-bottom 0.2s;
-}
-@media (max-width: 475px) {
-  .nav-link {
-    margin: 0 0.2rem;
-    padding: 0 0.2rem;
-    font-size: 1.2rem;
-  }
-}
 .nav-link:hover {
-  color: #e23d3d;
-  border-bottom: 2px solid #e23d3d;
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
 }
+
+
 .nav-link:active {
-  color: #f84848;
+  color: var(--color-accent-hover);
 }
+
+
+/* ==========================================================
+   GENERAL SECTIONS
+   ========================================================== */
+
+section {
+  scroll-margin-top: 12rem;
+}
+
+/*
+  Einheitlicher äußerer Abstand aller normalen Sections.
+  Keine großen individuellen Abstände mehr erforderlich.
+*/
+.sec-padding {
+  padding: 4rem 0;
+}
+
+/*
+  Zentraler Inhaltscontainer.
+*/
+.sec-content-div {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  font-size: 1.8rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text);
+  text-align: left;
+  line-height: 1.25;
+}
+
+/*
+  Überschrift eines großen Seitenbereichs
+*/
+.section-heading {
+  max-width: var(--content-width);
+  margin: 0 auto 2.5rem;
+  padding: 0 2rem;
+
+  font-size: 2.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+}
+
+/*
+  Unterüberschriften innerhalb des Inhalts
+*/
+.sec-content-div h2 {
+  margin: 0 0 2rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.sec-content-div h3 {
+  margin: 3.5rem 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.sec-content-div h4 {
+  margin: 2.5rem 0 0.8rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+/*
+  Fließtext
+*/
+.sec-content-div p {
+  margin: 0 0 1.6rem;
+}
+
+/*
+  Verhindert unnötige Leerfläche am Ende eines Abschnitts.
+*/
+.sec-content-div > :last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   LISTS
+   ========================================================== */
+
+.sec-content-div ul,
+.sec-content-div ol {
+  margin: 0 0 2rem;
+  padding-left: 2.5rem;
+}
+
+.sec-content-div li {
+  margin-bottom: 0.7rem;
+}
+
+.sec-content-div li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+.sec-content-div a {
+  color: var(--color-accent);
+}
+
+
+/* ==========================================================
+   HERO / HOME
+   ========================================================== */
+
 .flexible {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: center;
-  text-align: center;
+  align-items: center;
 }
+
 .home-sec {
   font-family: "Montserrat", sans-serif;
-  background-color: #ffffff;
-  text-align: start;
-  min-height: 60rem;
-  height: auto;
-  margin: 0 auto 5rem auto;
-  justify-content: start;
-  max-width: 95rem;
-  color: #333;
+  background-color: #fff;
+
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  color: var(--color-text);
 }
-@media (max-width: 800px) {
-  .home-sec {
-    flex-flow: column wrap;
-    max-width: 100%;
-  }
-}
+
+/*
+  Wichtig:
+  kein min-height: 60rem mehr.
+  Die Höhe ergibt sich aus dem Inhalt.
+*/
+
 .eye-grabber {
   flex: 1;
   padding: 0 2rem;
 }
-@media (max-width: 800px) {
-  .eye-grabber {
-    max-width: max-content;
-    padding-bottom: 8rem;
-  }
-}
+
 .eye-grabber h1 {
+  margin: 0 0 1.5rem;
   font-size: 5rem;
-  line-height: 1.5;
+  line-height: 1.25;
   font-weight: 600;
 }
+
 .eye-grabber h2 {
+  margin: 0;
   font-size: 2.4rem;
+  line-height: 1.45;
   font-weight: 500;
-  color: #666;
+  color: var(--color-muted);
 }
+
 .eye-grabber-img {
   flex: 1;
 }
-@media (max-width: 800px) {
-  .eye-grabber-img {
-    width: 100%;
-  }
-}
+
 .eye-grabber-img img {
+  display: block;
   max-width: 100%;
+  height: auto;
 }
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
 .btn {
   border: none;
+  outline: 0;
+
   font-size: 2rem;
   border-radius: 0.4rem;
   padding: 2rem;
-  background-color: #e23d3d;
+
+  background-color: var(--color-accent);
   color: #fafafa;
-  outline: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
   transition: all 0.2s;
 }
 
 .btn:hover {
-  background-color: #f84848;
+  background-color: var(--color-accent-hover);
   cursor: pointer;
 }
+
 .btn:active {
-  transform: scale(0.9);
+  transform: scale(0.97);
 }
 
-section {
-  scroll-margin-top: 120px; /* Höhe des Headers + etwas Luft */
-}
 
-.section-heading {
-  font-size: 2.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0;
-  padding: 2rem 0;
-  text-align: center;
-}
+/* ==========================================================
+   SECTION COLORS
+   ========================================================== */
 
-.sec-content-div {
-  
-  font-size: 2rem;
-  text-align: start;
-  padding: 0 2rem 5rem 2rem;
-  width: auto;
-  justify-content: space-around;
-  max-width: 95rem;
-  margin: 0 auto;
-}
-.sec-padding {
-  padding: 3rem 0 3rem 0;
-}
 #about {
   background-color: #fafafa;
 }
+
 #about img {
+  display: block;
   max-width: 100%;
   height: auto;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
 }
+
 #varieties {
   background-color: #e3e3e3;
 }
-.tile {
-  background-color: #fafafa;
-  height: 40rem;
-  width: 25rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 0.5rem;
-  transition: all 0.2s;
-  padding: 1.5rem;
-  margin: 1.5rem;
-}
-@media (max-width: 680px) {
-  .tile {
-    width: auto;
-    max-width: 100%;
-    min-width: 20rem;
-    margin: 1.5rem auto;
-    height: auto;
-  }
-}
-.tile img {
-  width: 100%;
-  max-width: 48rem;
-  border-radius: 0.5rem;
-}
-.tile h4 {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1rem 0;
-  color: #e23d3d;
-  margin: 0;
-}
-.tile p {
-  font-size: 1.6rem;
-  padding: 0;
-  margin: 0;
-}
-.tile:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
-}
-.tile-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
+
 #impressum {
   background-color: #ee6f57;
 }
+
+#benefits {
+  background-color: #f84848;
+}
+
+#contact {
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+#contact h1,
+#contact h2,
+#contact h3,
+#contact h4,
+#contact h5,
+#contact h6 {
+  color: var(--color-text);
+}
+
+
+/* ==========================================================
+   OFFER TILES
+   ========================================================== */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+
+/* Link füllt die komplette Grid-Zelle */
+
+.tile-link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Jede Kachel exakt gleich groß */
+
+.tile {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 43rem;
+
+  margin: 0;
+  padding: 1.5rem;
+
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+
+/* Alle Bilder bekommen identische Abmessungen */
+
+.tile img {
+  display: block;
+
+  width: 100%;
+  height: 16rem;
+
+  object-fit: cover;
+
+  border-radius: 0.5rem;
+}
+
+
+/* Überschrift innerhalb der Kachel */
+
+.tile h3 {
+  margin: 2rem 0 1rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+
+/* Text innerhalb der Kachel */
+
+.tile p {
+  margin: 0 0 1rem;
+
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  color: var(--color-accent);
+}
+
+
+.tile p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Hover */
+
+.tile:hover {
+  transform: translateY(-0.4rem);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.19),
+    0 16px 16px rgba(0, 0, 0, 0.23);
+}
+
+/* ==========================================================
+   BARS
+   ========================================================== */
+
 .bars {
-  height: max-content;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: flex-start;
-  margin: 2rem;
+  align-items: flex-start;
+
+  margin: 2rem 0;
   width: 100%;
 }
-@media (max-width: 990px) {
-  .bars {
-    flex-flow: column wrap;
-  }
-  .icon-container {
-    margin: 0 2.5rem;
-  }
-}
+
 .bars .icon-container {
   max-width: 10rem;
   flex: 1;
 }
+
 .icon-container img {
   max-height: 100%;
   max-width: 100%;
 }
+
 .bars .txt-container {
   flex: 2;
-  padding: 3rem;
+  padding: 2rem;
 }
+
 .txt-container h5 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
-  padding: 0;
-  margin: 0;
+  margin: 0 0 1rem;
+
   font-family: "Montserrat", sans-serif;
 }
+
 .txt-container p {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
 }
-#benefits {
-  background-color: #f84848;
+
+/* ==========================================================
+   COURSE DATES
+   ========================================================== */
+
+.course-dates {
+  margin: 0 0 2rem;
 }
+
+.next-course {
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--color-accent);
+}
+
+.course-dates h4 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.future-courses h4 {
+  margin-top: 0;
+}
+
+.future-courses p {
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================
+   FORMS
+   ========================================================== */
+
+.sec-content-div form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin: 2rem 0;
+}
+
+.sec-content-div form fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+
+  border: 1px solid var(--color-gray);
+  border-radius: 0.4rem;
+}
+
+.sec-content-div form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-right: 2rem;
+}
+
+
+/* ==========================================================
+   IFRAMES
+   ========================================================== */
+
 #benefits iframe {
   outline: 0;
   border: none;
-  width:100%;
+  width: 100%;
   border-radius: 0.4rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.19),
+    0 16px 16px rgba(0, 0, 0, 0.23);
 }
-#contact {
-  background-color: #cb3737;
-  color: #fafafa;
-}
-#contact h6 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-input[type="email"] {
-  border: none;
-  outline: 0;
-  font-size: 2rem;
-  border-radius: 0.4rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 2rem;
-}
-input[type="text"] {
-  border: none;
-  outline: 0;
-  font-size: 2rem;
-  border-radius: 0.4rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 2rem;
-}
-@media (max-width: 520px) {
-  #contact h6 {
-    font-size: 2rem;
-  }
-  #contact input[type="submit"],
-  #contact input[type="email"] {
-    margin: 1rem 1rem 0 1rem;
-  }
-}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
 footer {
   font-size: 1.4rem;
   background-color: #ce2f2f;
   text-align: center;
   padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
   color: #fafafa;
 }
+
 footer a {
   color: #e3e3e3;
   text-decoration: none;
 }
 
 
-span.space {
-  display: inline-block;
-  width: 200px; /* Abstand in Pixeln */
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+
+/* ---------- Tablet / kleinere Desktop-Fenster ---------- */
+
+@media (max-width: 1000px) {
+
+  .header-content-div {
+    max-width: 100%;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  #header-img {
+    height: 4rem;
+    flex-shrink: 0;
+  }
+
+  nav {
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 0.5rem 1.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.4rem;
+    text-align: right;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+  }
+
+  .home-sec {
+    max-width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .eye-grabber h1 {
+    font-size: 3.8rem;
+  }
+
+  .sec-padding {
+    padding: 3rem 0;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+  }
+
+  .sec-content-div {
+    font-size: 1.7rem;
+  }
+
+  .tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: left;
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 600px) {
+
+  .header-content-div {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  #header-img {
+    height: 3.5rem;
+  }
+
+  nav {
+    gap: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0;
+  }
+
+  .home-sec {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .eye-grabber {
+    padding: 0;
+  }
+
+  .eye-grabber h1 {
+    font-size: 3.2rem;
+  }
+
+  .eye-grabber-img {
+    width: 100%;
+  }
+
+  .section-heading {
+    font-size: 2.3rem;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tile {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .sec-content-div form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .sec-content-div form input[type="text"],
+  .sec-content-div form input[type="email"],
+  .sec-content-div form .btn {
+    width: 100%;
+  }
 }

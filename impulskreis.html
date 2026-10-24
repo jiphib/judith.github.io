@@ -1,134 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Impulskreis</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header id="header">
-      <div class="header-content-div">
-        <a href="index.html">
-          <img
-            src="assets/header.png"
-            alt="Company Logo"
-            id="header-img"
-        /></a>
-        <nav id="nav-bar">
-          <a href="#whatisit" class="nav-link">INTRO</a>
-          <a href="#termine" class="nav-link">TERMINE</a>
-          <a href="#registration" class="nav-link">ANMELDUNG</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      
-      <section id="home-sec" class="flexible home-sec">
-        <div class="eye-grabber-img">
-          <img src="assets/Impulskreis_virtues_project.jpg" alt="Front Picture" />
-        </div>
-        <div class="eye-grabber">
-          <h1>Impulskreis</h1>
-          <h2>
-            <i>jeweils von 18:30 - ca. 20 Uhr</i><br><br>
-            Jeden 1. Montag im Monat (außer während der bayrischen Schulferien)<br><br>
-            <i>Kostenfreies Angebot</i>
-          </h2>
-        </div>
-      </section>
-      
-      <section id="whatisit" class="sec-padding">
-        <h3 class="section-heading">🌟 Austausch und Inspiration 🌟</h3>
-        <div class="sec-content-div flexible">
-          <p>
-            Wir reflektieren die Tugend des letzten Monats und tauschen uns darüber aus, wie wir sie erlebt haben oder wie sie uns begegnet ist. Danach ziehen wir eine neue Tugendkarte und erkunden, was sie für uns bedeutet.         
-          </p>
-          <p>  
-            ✨ Lust, mal reinzuschnuppern? ✨
-          </p>
-          <p>  
-          Komm vorbei und lass dich inspirieren – du bist herzlich willkommen! 💛 <br>
-          <br>          
-          Moderation: Judith Böhme, Facilitator im Virtues Project<br>
-          🕒 von 18.30 Uhr bis ca. 20 Uhr<br>
-          📍 Ort: Kempten
-          </p>
-        </div>
-      </section>
+<html lang="de">
 
-      <section id="termine" class="sec-padding">
-        <h3 class="section-heading">Termine in 2026</h3>
-        <div class="sec-content-div flexible">
-          <p>
-            In der Regel jeden ersten Montag im Monat<br><br>
-            • November: Montag, 9.11. (2. Montag im Monat)<br>
-            • Dezember: Montag, 7.12.<br>
-          </p>
-        </div>
-      </section>
-    
-      <section id="termine" class="sec-padding">
-        <h3 class="section-heading">Termine in 2027</h3>
-        <div class="sec-content-div flexible">
-          <p>
-            In der Regel jeden ersten Montag im Monat (außer in den bayrischen Schulferien)<br><br>
-            • Januar: Montag, 11.1. (2. Montag im Monat)<br>
-            • Februar: Montag, 1.2.<br>
-            • März: Montag, 1.3.<br>
-            • April: Montag, 5.4.<br>
-            • Mai: Montag, 3.5.<br>
-            • Juni: Montag, 7.6.<br>
-            • Juli: Montag, 5.7.<br>
-            • === Sommerpause ===<br>
-            • September: Montag, 13.9. (2. Montag im Monat)<br>
-            • Oktober: Montag, 4.10.<br>
-            • November: Montag, 8.11. (2. Montag im Monat)<br>
-            • Dezember: Montag, 6.12.<br>
-          </p>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
 
-      <section class="sec-padding" id="registration">
-        <h3 class="section-heading">Anmeldung</h3>
-        <div class="sec-content-div flexible">
-          <p>
-            Melde dich gerne für den nächsten Termin hier an. Die genaue Adresse sende ich dir anschließend per E-Mail zu. Du bist herzlich willkommen – ich freue mich, wenn du dabei bist!
-          </p>
-          <form
-            id="form"
-            action="https://formsubmit.co/e828999c0caeb23183142b3810ac7fa8"
-            method="POST"
-          >
-            <input
-              type="text"
-              name="Vor- und Nachname"
-              id="name"
-              placeholder="Vor- und Nachname"
-              required
-            />
-            <br><br>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-            <input
-              type="hidden"
-              id="event"
-              name="event" value="Impulskreis"
-            />
-            <input type="submit" class="btn" id="submit" value="Ich bin dabei" />
-          </form>
-         
-        </div>
-      </section>
+  <title>Impulskreis</title>
 
-    </main>
-    <footer>
-    </footer>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  </body>
+<body>
+
+<header id="header">
+  <div class="header-content-div">
+
+    <a href="index.html">
+      <img
+        src="assets/header.png"
+        alt="Judith Böhme"
+        id="header-img">
+    </a>
+
+    <nav id="nav-bar">
+      <a href="#whatisit" class="nav-link">INTRO</a>
+      <a href="#termine-2026" class="nav-link">TERMINE</a>
+      <a href="#registration" class="nav-link">ANMELDUNG</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
+
+  <section id="home-sec" class="home-sec flexible">
+
+    <div class="eye-grabber-img">
+      <img
+        src="assets/Impulskreis_virtues_project.jpg"
+        alt="Impulskreis Virtues Project">
+    </div>
+
+    <div class="eye-grabber">
+
+      <h1>Impulskreis</h1>
+
+      <h2>
+        <i>jeweils von 18:30 – ca. 20 Uhr</i>
+      </h2>
+
+      <p>
+        Jeden 1. Montag im Monat
+        (außer während der bayrischen Schulferien)
+      </p>
+
+      <p>
+        <i>Kostenfreies Angebot</i>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       AUSTAUSCH UND INSPIRATION
+       ===================================================== -->
+
+  <section id="whatisit" class="sec-padding">
+
+    <h2 class="section-heading">
+      🌟 Austausch und Inspiration 🌟
+    </h2>
+
+    <div class="sec-content-div">
+
+      <p>
+        Wir reflektieren die Tugend des letzten Monats und tauschen
+        uns darüber aus, wie wir sie erlebt haben oder wie sie uns
+        begegnet ist. Danach ziehen wir eine neue Tugendkarte und
+        erkunden, was sie für uns bedeutet.
+      </p>
+
+      <p>
+        <strong>✨ Lust, mal reinzuschnuppern? ✨</strong>
+      </p>
+
+      <p>
+        Komm vorbei und lass dich inspirieren –
+        du bist herzlich willkommen! 💛
+      </p>
+
+      <ul>
+        <li>
+          <strong>Moderation:</strong>
+          Judith Böhme, Facilitator im Virtues Project
+        </li>
+
+        <li>
+          🕒 <strong>Zeit:</strong>
+          von 18.30 Uhr bis ca. 20 Uhr
+        </li>
+
+        <li>
+          📍 <strong>Ort:</strong>
+          Kempten
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       TERMINE 2026
+       ===================================================== -->
+
+  <section id="termine-2026" class="sec-padding">
+
+    <h2 class="section-heading">
+      Termine in 2026
+    </h2>
+
+    <div class="sec-content-div">
+
+      <p>
+        In der Regel jeden ersten Montag im Monat.
+      </p>
+
+      <ul>
+        <li>
+          <strong>November:</strong>
+          Montag, 9.11. (2. Montag im Monat)
+        </li>
+
+        <li>
+          <strong>Dezember:</strong>
+          Montag, 7.12.
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       TERMINE 2027
+       ===================================================== -->
+
+  <section id="termine-2027" class="sec-padding">
+
+    <h2 class="section-heading">
+      Termine in 2027
+    </h2>
+
+    <div class="sec-content-div">
+
+      <p>
+        In der Regel jeden ersten Montag im Monat
+        (außer in den bayrischen Schulferien).
+      </p>
+
+      <ul>
+        <li><strong>Januar:</strong> Montag, 11.1. (2. Montag im Monat)</li>
+        <li><strong>Februar:</strong> Montag, 1.2.</li>
+        <li><strong>März:</strong> Montag, 1.3.</li>
+        <li><strong>April:</strong> Montag, 5.4.</li>
+        <li><strong>Mai:</strong> Montag, 3.5.</li>
+        <li><strong>Juni:</strong> Montag, 7.6.</li>
+        <li><strong>Juli:</strong> Montag, 5.7.</li>
+        <li><strong>Sommerpause</strong></li>
+        <li><strong>September:</strong> Montag, 13.9. (2. Montag im Monat)</li>
+        <li><strong>Oktober:</strong> Montag, 4.10.</li>
+        <li><strong>November:</strong> Montag, 8.11. (2. Montag im Monat)</li>
+        <li><strong>Dezember:</strong> Montag, 6.12.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ANMELDUNG
+       ===================================================== -->
+
+  <section id="registration" class="sec-padding">
+
+    <h2 class="section-heading">
+      Anmeldung
+    </h2>
+
+    <div class="sec-content-div">
+
+      <p>
+        Melde dich gerne für den nächsten Termin hier an.
+        Die genaue Adresse sende ich dir anschließend per E-Mail zu.
+        Du bist herzlich willkommen – ich freue mich, wenn du dabei bist!
+      </p>
+
+      <form
+        id="form"
+        action="https://formsubmit.co/e828999c0caeb23183142b3810ac7fa8"
+        method="POST">
+
+        <input
+          type="text"
+          name="Vor- und Nachname"
+          id="name"
+          placeholder="Vor- und Nachname"
+          required>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required>
+
+        <input
+          type="hidden"
+          id="event"
+          name="event"
+          value="Impulskreis">
+
+        <input
+          type="submit"
+          class="btn"
+          id="submit"
+          value="Ich bin dabei">
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+</footer>
+
+</body>
 </html>
