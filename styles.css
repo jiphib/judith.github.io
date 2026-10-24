@@ -590,6 +590,27 @@ h6 {
 }
 
 
+/* Contact form */
+
+#contact form {
+  gap: 1rem;
+}
+
+#contact form input {
+  width: 180px;
+  padding: 12px 14px;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+#contact form button {
+  margin-left: 0;
+}
+
+
 /* ==========================================================
    IFRAMES
    ========================================================== */
